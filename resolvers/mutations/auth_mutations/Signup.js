@@ -1,6 +1,7 @@
 import User from "../../../models/User.js";
 import { findUser } from "../../../helper_functions/findUser.js";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 
 export const signup = async (parent, args, ctx, info) => {
   const email = args.data.email.toLowerCase();

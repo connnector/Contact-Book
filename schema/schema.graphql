@@ -5,6 +5,8 @@ type Query {
 type Mutation {
   signup(data: Signup_input): auth_data!
   login(data: Login_input): auth_data!
+  updateUser(data: user_update_data): User!
+  deleteUser: User!
 }
 
 type User {
@@ -18,12 +20,15 @@ input Signup_input {
   name: String!
   email: String!
   password: String!
-  token: String!
 }
 
 input Login_input {
   email: String!
-  passwor: String!
+  password: String!
+}
+
+input user_update_data {
+  name: String!
 }
 
 type auth_data {
