@@ -2,4 +2,34 @@ type Query {
   ans: String!
 }
 
+type Mutation {
+  signup(data: Signup_input): auth_data!
+  login(data: Login_input): auth_data!
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  password: String!
+}
+
+input Signup_input {
+  name: String!
+  email: String!
+  password: String!
+  token: String!
+}
+
+input Login_input {
+  email: String!
+  passwor: String!
+}
+
+type auth_data {
+  user: User!
+  token: String!
+  expirationTime: Int!
+}
+
 scalar Upload
