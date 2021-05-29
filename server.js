@@ -15,6 +15,7 @@ import chalk from "chalk";
 import { importSchema } from "graphql-import";
 
 import Query from "./resolvers/Query.js";
+import Mutation from "./resolvers/Mutation.js";
 import isAuth from "./middlewares/isAuth.js";
 import database from "./db.js";
 
@@ -31,6 +32,7 @@ const apiLimiter = rateLimit({
 
 const resolvers = {
   Query,
+  Mutation,
 };
 
 const PORT = process.env.PORT;
