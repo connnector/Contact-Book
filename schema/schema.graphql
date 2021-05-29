@@ -18,12 +18,11 @@ input Signup_input {
   name: String!
   email: String!
   password: String!
-  token: String!
 }
 
 input Login_input {
   email: String!
-  passwor: String!
+  password: String!
 }
 
 type auth_data {
