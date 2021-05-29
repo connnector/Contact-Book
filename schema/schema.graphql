@@ -7,6 +7,10 @@ type Mutation {
   login(data: Login_input): auth_data!
   updateUser(data: user_update_data): User!
   deleteUser: User!
+
+  newContact(data: new_contact_data!): Contact!
+  updateContact(data: update_contact_data!): Contact!
+  deleteContact(contactId: ID!): Contact!
 }
 
 type User {
@@ -35,6 +39,22 @@ type auth_data {
   user: User!
   token: String!
   expirationTime: Int!
+}
+
+type Contact {
+  id: ID!
+  name: String!
+  email: String!
+}
+
+input new_contact_data {
+  name: String!
+  email: String!
+}
+
+input update_contact_data {
+  name: String
+  email: String
 }
 
 scalar Upload
