@@ -1,0 +1,5 @@
+type Query {
+  ans: String!
+}
+
+scalar Upload
