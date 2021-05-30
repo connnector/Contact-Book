@@ -1,5 +1,5 @@
 type Query {
-  allContacts: [Contact]
+  allContacts(skip: Int!, limit: Int!): [Contact]
   search(query: String!, searchFrom: QueryFrom): [Contact]
 }
 
