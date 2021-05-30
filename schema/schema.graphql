@@ -9,8 +9,8 @@ type Mutation {
   deleteUser: User!
 
   newContact(data: new_contact_data!): Contact!
-  updateContact(data: update_contact_data!): Contact!
-  deleteContact(contactId: ID!): Contact!
+  updateContact(data: update_contact_data!, contact_id: ID!): Contact!
+  deleteContact(contact_id: ID!): Contact!
 }
 
 type User {
