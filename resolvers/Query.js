@@ -10,7 +10,10 @@ const Query = {
     let contacts;
 
     try {
-      contacts = await Contact.find({ creator: context.id });
+      contacts = await Contact.find({ creator: context.id }, null, {
+        skip: args.skip,
+        limit: args.limit,
+      });
     } catch (e) {
       throw new Error(e);
     }
