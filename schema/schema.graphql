@@ -1,5 +1,6 @@
 type Query {
-  ans: String!
+  allContacts: [Contact]
+  search(query: String!, searchFrom: QueryFrom): [Contact]
 }
 
 type Mutation {
@@ -59,3 +60,8 @@ input update_contact_data {
 }
 
 scalar Upload
+
+enum QueryFrom {
+  NAME
+  EMAIL
+}
