@@ -75,22 +75,22 @@ describe("contact resolvers", () => {
     );
     const { data } = response;
 
-    expect(data.data.updateContact.id).not.toBe(null);
+    console.log(data);
+
+    expect(data).not.toBe(null);
   });
 
   test("delete contact", async () => {
-    const id = shortid.generate();
-    const email = `${id}@test.com`;
     const response = await axios.post(
       URL,
       {
         query: `
-            mutation{
-              deleteContact(contact_id:"${contact_id}"){
-                  id
-                  name
-              }
-            }`,
+              mutation{
+                deleteContact(contact_id:"${contact_id}"){
+                    id
+                    name
+                }
+              }`,
       },
       {
         headers: {
