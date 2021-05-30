@@ -14,11 +14,9 @@ export const deleteContact = async (parent, args, context, info) => {
   }
 
   try {
-    await Contact.deleteOne({
-      _id: args.contact_id,
-    });
+    await contact.delete();
 
-    await contact.save();
+    console.log(contact);
 
     return contact;
   } catch (e) {

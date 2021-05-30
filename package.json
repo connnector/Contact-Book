@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "develop": "nodemon server.js --ext js,grapgql"
+    "develop": "nodemon server.js --e js,grapgql"
   },
   "author": "",
   "license": "ISC",
