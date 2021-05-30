@@ -45,6 +45,7 @@ type Contact {
   id: ID!
   name: String!
   email: String!
+  creator: User!
 }
 
 input new_contact_data {
