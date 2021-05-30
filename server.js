@@ -16,6 +16,7 @@ import { importSchema } from "graphql-import";
 
 import Query from "./resolvers/Query.js";
 import Mutation from "./resolvers/Mutation.js";
+import Contact from "./resolvers/Contact.js";
 import isAuth from "./middlewares/isAuth.js";
 import database from "./db.js";
 
@@ -33,6 +34,7 @@ const apiLimiter = rateLimit({
 const resolvers = {
   Query,
   Mutation,
+  Contact,
 };
 
 const PORT = process.env.PORT;
