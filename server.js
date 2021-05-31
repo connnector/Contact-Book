@@ -43,12 +43,6 @@ const app = express();
 
 app.use(apiLimiter);
 app.use(xss());
-app.use(
-  helmet({
-    contentSecurityPolicy:
-      process.env.NODE_ENV === "production" ? undefined : false,
-  })
-);
 
 app.use(mongoSanitize());
 app.use(cors());
