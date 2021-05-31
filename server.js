@@ -68,6 +68,8 @@ const server = new ApolloServer({
     ...resolvers,
     Upload: GraphQLUpload,
   },
+  playground: true,
+  introspection: true,
   context: ({ req, res, connection }) => {
     if (connection) {
       return { ...connection, res, req };
