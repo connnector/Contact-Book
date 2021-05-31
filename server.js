@@ -9,7 +9,6 @@ import http from "http";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
 import xss from "xss-clean";
-import helmet from "helmet";
 import mongoSanitize from "express-mongo-sanitize";
 import chalk from "chalk";
 import { importSchema } from "graphql-import";
