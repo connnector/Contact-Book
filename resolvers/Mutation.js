@@ -1,5 +1,5 @@
-import { login } from "./mutations/auth_mutations/login.js";
-import { signup } from "./mutations/auth_mutations/signup.js";
+import { login } from "./mutations/auth_mutations/Login.js";
+import { signup } from "./mutations/auth_mutations/Signup.js";
 import { deleteUser } from "./mutations/user_mutations/Delete.js";
 import { updateUser } from "./mutations/user_mutations/Update.js";
 
